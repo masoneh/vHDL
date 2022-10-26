@@ -1,11 +1,12 @@
-//8-bit ALU///
+//N-bit ALU///
 //Thea Zhu///
 
 `include "ALU.v"
 module ALU_tb;
-	reg [7:0] Ain,Bin;
+    parameter N1 = 8;
+	reg [N1*8-1:0] Ain,Bin;
 	reg [2:0] mode;
-	wire [15:0] result;
+	wire [N1*8-1:0] result;
 	ALU a1(Ain,Bin,mode,result);
 
 	initial 
@@ -13,9 +14,11 @@ module ALU_tb;
 			$dumpfile("ALU.vcd");
             $dumpvars(0,ALU_tb);
 
-			Ain = 8'h33;Bin = 8'h44; mode = 3'd0;
+			Ain = 8'h44;Bin = 8'h33; mode = 3'd0;
+            //$display (Ain+Bin);
 			#10;
-			Ain = 8'h33;Bin = 8'h44; mode = 3'd1;
+			Ain = 8'h44;Bin = 8'h33; mode = 3'd1;
+            //$display (Ain - Bin);
 			#10;
 			Ain = 8'h33;Bin = 8'h44; mode = 3'd2;
 			#10;
