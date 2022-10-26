@@ -1,0 +1,51 @@
+$date
+	Wed Oct 26 00:17:29 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module rsh_four_tb $end
+$var wire 8 ! b [7:0] $end
+$var reg 8 " a [7:0] $end
+$var integer 32 # i [31:0] $end
+$scope module a4 $end
+$var wire 8 $ a [7:0] $end
+$var reg 8 % b [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+b1000 $
+b0 #
+b1000 "
+b0 !
+$end
+#10
+b11111110 !
+b11111110 %
+b11101101 "
+b11101101 $
+b1 #
+#20
+b10 #
+#30
+b11111111 !
+b11111111 %
+b11110111 "
+b11110111 $
+b11 #
+#40
+b1 !
+b1 %
+b10001 "
+b10001 $
+b100 #
+#50
+b101 #
+#60
+b110 #
