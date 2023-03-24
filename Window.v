@@ -15,8 +15,7 @@ module Window(input_function, new_function, coefficients);
         begin 
             // apply hamming window to input  
             for(j=0; j<size; j=j+1) begin
-                new_function[j*7 +: 7] = coefficients[j*7 +: 7] * input_function[j*7 +: 7];
-		    
+                new_function[j*7 +: 7] = coefficients[j*7 +: 7] * input_function[j*7 +: 7];  
             end 
         end
 	 endgenerate
