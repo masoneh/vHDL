@@ -2,6 +2,7 @@ module sample_to_bus(
 input 50mHzclk; //FPGA 50 mHz clk
 input bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7; // 1 bit inputs 
 output reg [63:0] out; // 64-bit bus comprised of 8 samples
+output reg set; // set bit to 1 to let window function know it's ready
 );
 
 reg slow_clk; //slow clk bit
@@ -38,8 +39,8 @@ always @ (posedge slow_clk) begin // set each bit of sample to a byte
         3'b100: begin out[39:32] <= samplebuf; count <= count + 1; end // sample 5
         3'b101: begin out[47:40] <= samplebuf; count <= count + 1; end // sample 6
         3'b110: begin out[55:48] <= samplebuf; count <= count + 1; end // sample 7
-        3'b111: begin out[63:56] <= samplebuf; count <= count + 1; end // sample 8
-        default: count <= 0;
+        3'b111: begin out[63:56] <= samplebuf; count <= count + 1; set <= 1; end // sample 8
+        default: begin count <= 0; set <= 0; end
     endcase
     
 end
