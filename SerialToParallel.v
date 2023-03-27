@@ -1,5 +1,5 @@
 module SerialToParallel(D, clk, reset, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7);
-	input [63:0] D; 
+	input [7:0] D; 
 	input clk; //rising edge D flip flop
 	input reset;
 	output reg [7:0] Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
