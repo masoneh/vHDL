@@ -6,28 +6,49 @@
 //DFF with clock enable with 16 bit 
 
 
-module DFF_colck_enable_16(a,clk,en,y);
+module DFF_clock_enable_16(a,clk,en,y);
 	
 	parameter N = 4;
 	input [(2**N)-1:0] a;
 	input clk,en;
 	output[(2**N)-1:0] y;
+	
 	 
-	DFF_colck_enable d1(y[0],clk,en,a[0]);
-	DFF_colck_enable d2(y[1],clk,en,a[1]);
-	DFF_colck_enable d3(y[2],clk,en,a[2]);
-	DFF_colck_enable d4(y[3],clk,en,a[3]);
-	DFF_colck_enable d5(y[4],clk,en,a[4]);
-	DFF_colck_enable d6(y[5],clk,en,a[5]);
-	DFF_colck_enable d7(y[6],clk,en,a[6]);
-	DFF_colck_enable d8(y[7],clk,en,a[7]);
-	DFF_colck_enable d9(y[8],clk,en,a[8]);
-	DFF_colck_enable d10(y[9],clk,en,a[9]);
-	DFF_colck_enable d11(y[10],clk,en,a[10]);
-	DFF_colck_enable d12(y[11],clk,en,a[11]);
-	DFF_colck_enable d13(y[12],clk,en,a[12]);
-	DFF_colck_enable d14(y[13],clk,en,a[13]);
-	DFF_colck_enable d15(y[14],clk,en,a[14]);
-	DFF_colck_enable d16(y[15],clk,en,a[15]);
+	DFF_colck_enable d1(a[0],clk,en,y[0]);
+	DFF_colck_enable d2(a[1],clk,en,y[1]);
+	DFF_colck_enable d3(a[2],clk,en,y[2]);
+	DFF_colck_enable d4(a[3],clk,en,y[3]);
+	DFF_colck_enable d5(a[4],clk,en,y[4]);
+	DFF_colck_enable d6(a[5],clk,en,y[5]);
+	DFF_colck_enable d7(a[6],clk,en,y[6]);
+	DFF_colck_enable d8(a[7],clk,en,y[7]);
+	DFF_colck_enable d9(a[8],clk,en,y[8]);
+	DFF_colck_enable d10(a[9],clk,en,y[9]);
+	DFF_colck_enable d11(a[10],clk,en,y[10]);
+	DFF_colck_enable d12(a[11],clk,en,y[11]);
+	DFF_colck_enable d13(a[12],clk,en,y[12]);
+	DFF_colck_enable d14(a[13],clk,en,y[13]);
+	DFF_colck_enable d15(a[14],clk,en,y[14]);
+	DFF_colck_enable d16(a[15],clk,en,y[15]);
 
+endmodule
+
+module DFF_colck_enable(d,clk,en,q);
+
+	input d,clk,en;
+
+	output reg q;
+	
+	initial begin
+		q = 0;
+	end
+	
+	always @(posedge clk) begin
+		 if (en) begin
+			  q <=d;
+		 end
+		 else begin
+			  q <=q;
+		 end
+	end
 endmodule
