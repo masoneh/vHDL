@@ -36,5 +36,5 @@ module DFF_colck_enable(d,clk,en,q);
 		 end
 	end
 endmodule
-		
+		  
 	
