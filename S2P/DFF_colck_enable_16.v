@@ -33,22 +33,3 @@ module DFF_clock_enable_16(a,clk,en,y);
 
 endmodule
 
-module DFF_colck_enable(d,clk,en,q);
-
-	input d,clk,en;
-
-	output reg q;
-	
-	initial begin
-		q = 0;
-	end
-	
-	always @(posedge clk) begin
-		 if (en) begin
-			  q <=d;
-		 end
-		 else begin
-			  q <=q;
-		 end
-	end
-endmodule
