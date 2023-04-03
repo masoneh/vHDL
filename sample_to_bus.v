@@ -9,7 +9,7 @@ output reg slow_clk;
 reg [7:0] samplebuf; // reg to store each sample
 reg [2:0] count; // count to track num of samples entered
 reg [10:0] counter; // clock divider counter
-integer num = 3; // change this to change slow clk freq
+integer num = 1667; // change this to change slow clk freq
 
 always @ (posedge fastclk) begin // clock divider module, setting slow clk to 10 kHz
 counter <= counter + 1;
