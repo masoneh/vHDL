@@ -18,15 +18,13 @@ module SerialToParallel(D, clk, reset, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7);
 		end 
 		else begin 
 			Q0 = D[7:0];
-			Q1 = Q0[7:0];
-			Q2 = Q1[7:0];
-			Q3 = Q2[7:0];
-			Q4 = Q3[7:0];
-			Q5 = Q4[7:0];
-			Q6 = Q5[7:0];
-			Q7 = Q6[7:0];
+			Q1 = D[15:8];
+			Q2 = D[23:16];
+			Q3 = D[31:24];
+			Q4 = D[39:32];
+			Q5 = D[47:40];
+			Q6 = D[55:48];
+			Q7 = D[63:56];
 		end
 	end
-endmodule 
-	 
-	
+endmodule
