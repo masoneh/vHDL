@@ -3,6 +3,7 @@ module EightToSixteen(reset, clk, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, NewQ0, NewQ1, 
 	output reg [15:0] NewQ0, NewQ1, NewQ2, NewQ3, NewQ4, NewQ5, NewQ6, NewQ7;
 	input clk;
 	input reset;
+	//input set3;
 	
 	always @(posedge clk)
 	begin

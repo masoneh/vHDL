@@ -3,9 +3,12 @@ module SerialToParallel(D, clk, reset, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7);
 	input clk; //rising edge D flip flop
 	input reset;
 	output reg [7:0] Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7;
+	//input set2;
+	//output reg set3 = 0;
 	
 	always @(posedge clk) 
 	begin
+	//set3 = 0;
 		if(reset==1'b1) begin 
 			Q0 = 8'h00;
 			Q1 = 8'h00;
@@ -26,5 +29,6 @@ module SerialToParallel(D, clk, reset, Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7);
 			Q6 = D[55:48];
 			Q7 = D[63:56];
 		end
+	//set3 = 1;
 	end
 endmodule

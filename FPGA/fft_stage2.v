@@ -36,3 +36,4 @@ module fft_stage2(s0,s1,s2,s3,s4,s5,s6,s7,clk,rst,t0,tr1,ti1,t2,tr3,ti3,t4,tr5,t
 
 
 endmodule
+
