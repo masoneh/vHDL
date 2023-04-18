@@ -4,16 +4,16 @@
 
 //`include "c_multiplier.v"
 
-module complex_mul(ra,rb,clk,rst,real_op,image_op);
+module complex_mul_2(ra,rb,clk,rst,real_op,image_op);
     parameter N = 4;
     input [(2**N)-1:0] ra,rb;
     input clk,rst;
     output [(2**N)-1:0] real_op, image_op;
 
     wire [(2**N)-1:0] s1,s2,s3,s4,s5,s6;
-
-    add_sub a1(1'b0,ra,rb,s1);
-    add_sub a2(1'b1,ra,rb,s2);
+//0 is "+", 1 is "-"
+    add_sub a1(1'b1,ra,rb,s1);//s1 = a-b
+    add_sub a2(1'b0,ra,rb,s2);//s2 = a+b
 
     //synchronize the operations
     reg_n rr1 (s1,clk,rst,s3);//s3 = s1
@@ -27,10 +27,6 @@ module complex_mul(ra,rb,clk,rst,real_op,image_op);
     reg_n rr4(s6,clk,rst,image_op);
 
 
-
-
-
-    
 
     
 endmodule

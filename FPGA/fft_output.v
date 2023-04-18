@@ -8,8 +8,8 @@ output reg [2:0] index;
 
 reg slowclk;
 reg [2:0] output_count = 0;
-reg[4:0] counter = 0;
-integer clk_count = 25;
+reg[25:0] counter = 0;
+integer clk_count = 50000000;
 
 always @ (posedge fastclk) begin // clock divider module, setting slowclk to 1MHz
 counter <= counter + 1;

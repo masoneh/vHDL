@@ -35,3 +35,4 @@ module Window(input_function, new_function, clk, rst, set1);
 				//set2 = 1;
         end
 endmodule
+

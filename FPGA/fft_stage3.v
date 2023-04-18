@@ -16,7 +16,7 @@ module fft_stage3(a0,a1,ar2,ai2,ar3,ai3,a4,a5,ar6,ai6,ar7,ai7,clk,rst,
     input clk,rst;
     output [(2**N)-1:0]y0,yr1,yi1,yr2,yi2,yr3,yi3,y4,yr5,yi5,yr6,yi6,yr7,yi7;  
 
-    butterfly_1 bf1_1(a0,a1,clk,rst,y0,y4); //mark
+    butterfly_1 bf1_1(a0,a1,clk,rst,y0,y4);
 
     butterfly_1 bf1_real(ar2,ar3,clk,rst,yr5,yr1);// Real part y1,y5
     butterfly_1 bf1_imag(ai2,ai3,clk,rst,yi5,yi1);// imag part y1,y5

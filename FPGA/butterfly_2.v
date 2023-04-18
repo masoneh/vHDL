@@ -17,7 +17,8 @@ module butterfly_2(a,b,clk,rst,yr1,yr2,yi1,yi2);
 
     reg_n rr1 (a,clk,rst,yr1);
     add_sub sub1(1'b1,zero_real,b,t); //s1 = 0-b
-    reg_n rr3 (t,clk,rst,yi1);
+    reg_n rr2 (t,clk,rst,yi1);
+	 reg_n rr3 (b,clk,rst,yi2);
     assign yr2 = yr1;
  
 

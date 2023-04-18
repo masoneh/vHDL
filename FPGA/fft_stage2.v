@@ -32,8 +32,7 @@ module fft_stage2(s0,s1,s2,s3,s4,s5,s6,s7,clk,rst,t0,tr1,ti1,t2,tr3,ti3,t4,tr5,t
     delay d6(y6,clk,rst,t6);
 
     complex_mul cm1(yr5,yi5,clk,rst,tr5,ti5);
-    complex_mul cm2(yr7,yi7,clk,rst,tr7,ti7);
+    complex_mul_2 cm2(yr7,yi7,clk,rst,tr7,ti7);
 
 
 endmodule
-
