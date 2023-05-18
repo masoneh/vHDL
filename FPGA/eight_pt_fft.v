@@ -1,7 +1,4 @@
-///////////////
-////Thea Zhu///
-///////////////
-//
+
 // `include "fft_stage1.v"
 // `include "fft_stage2.v"
 // `include "fft_stage3.v"
