@@ -1,6 +1,4 @@
-////////////////
-////Thea Zhu///
-///////////////
+
 
 
 module add_sub(add,a,b,result);
