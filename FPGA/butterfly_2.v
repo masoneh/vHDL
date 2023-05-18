@@ -1,11 +1,4 @@
 
-////////////////
-////Thea Zhu///
-///////////////
-
-
-
-
 module butterfly_2(a,b,clk,rst,yr1,yr2,yi1,yi2);
     parameter N = 4;
     input  [(2**N)-1:0] a,b;
