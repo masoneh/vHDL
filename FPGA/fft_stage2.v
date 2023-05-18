@@ -1,8 +1,4 @@
 
-////////////////
-////Thea Zhu///
-///////////////
-
 //`include "butterfly_1.v"
 //`include "butterfly_2.v"
 //`include "delay.v"
